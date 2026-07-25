@@ -42,4 +42,3 @@ Repo made by `Johnryzon Z. Abejero`,
 
 Contributors: 
 * Nguyễn Phước Thành Lâm
-* Johnryzon Z. Abejero
