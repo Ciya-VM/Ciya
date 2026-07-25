@@ -1,6 +1,6 @@
 /*
 Ciya: a future programming language VM that is hoped to be a bigger leap than the successor, "CRy"
-    Copyright (C) 2026  Johnryzon Z. Abejero, Nguyễn Phước Thành Lâm, <please put your name here>
+    Copyright (C) 2026  Johnryzon Z. Abejero, Nguyễn Phước Thành Lâm
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -21,19 +21,19 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
 
 #define LIMIT_TEST 19 // Added a char limit for the project
 
-typedef struct Var {
-  char Testing[LIMIT_TEST];
+typedef struct Var{ 
+  char Testing[LIMIT_TEST];//The char
 } Var; // Typedef name
 
-void call(const char *string) { //Function to call
-  printf("%s", string);
+void callstr(const char *string) { //Function to call string
+  printf("%s", string);//Use printf for compatiable purposes
 }
 
-int main() {
-  // Use Variable1 (or struct Variables1)
+int main() { //The main function
+  // Use Var (or struct Var)
   Var writing = {"Testing...testing\n"};
-  Var *ptr = &writing;
+  Var *ptr = &writing;//To point ptr to writing
 
-  call(ptr->Testing);
-  return 0;
+  callstr(ptr->Testing);//Call the function variable
+  return 0;//It didn't fail, hopefully
 }
