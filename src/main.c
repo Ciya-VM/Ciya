@@ -1,6 +1,6 @@
 /*
-Ciya: a future programming language VM that is hoped to be more successful than the successor, "CRy"
-    Copyright (C) 2026  Johnryzon Z. Abejero, <please put your name here>
+Ciya: a future programming language VM that is hoped to be a bigger leap than the successor, "CRy"
+    Copyright (C) 2026  Johnryzon Z. Abejero, Nguyễn Phước Thành Lâm, <please put your name here>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
