@@ -27,8 +27,8 @@ feature that leads to it not being cross-platform
 
 ## Essential tools:
   * [GCC](https://gcc.gnu.org/) (or [Clang](https://clang.llvm.org/)): for compiling code
-  * [CMAKE](https://cmake.org/]: For building the build files
-  * [MAKE](https://en.wikipedia.org/wiki/Make_(software)] (or other build systems like [Ninja](https://ninja-build.org/)): for building the program
+  * [CMAKE](https://cmake.org/): For building the build files
+  * [MAKE](https://en.wikipedia.org/wiki/Make_(software)) (or other build systems like [Ninja](https://ninja-build.org/)): for building the program
   * [GDB](https://www.sourceware.org/gdb/)(optional): For debugging code
   * [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)(for windows, optional)
 
