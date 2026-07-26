@@ -40,7 +40,7 @@ commit to the other ones like CRy-VM, Ry2, or Ry1, because they got abandoned lo
 ## Benchmark(Still in development):
 <img width="1440" height="173" alt="image" src="https://github.com/user-attachments/assets/3b4a283b-9fcc-4e1f-93f5-f4aff10eb967" />
 
-As it says, it's 0.007 seconds in the real world and spent 0.016 seconds on the user-space time, which is still blazingly fast code.
+As it says, it's 0.005 seconds in the real world, which is still blazingly fast code.
 (By the way, we tested it in `WSL1`, Ubuntu)
 
 Repo made by `Johnryzon Z. Abejero`,
