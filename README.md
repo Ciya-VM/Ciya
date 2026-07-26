@@ -17,8 +17,9 @@ but if you have any ideas to share, we'll try our best to achieve them.
 Feel free to collaborate on this project, but you MUST follow the license and policy
 
 ## Policy(Rules):
-+ You should never swear at or intimidate others on every part of the software, not even on PRs.
-+ Must not make a single thing in the project dependent on 1 operating system
++ You should never swear at or intimidate others in any part of the software, not even on PRs.
++ Must not make a single thing in the project dependent on only
+ 1 operating system
 feature that leads to it not being cross-platform
 + Please report to us when there's any problem:
     * phuocthanhlamnguyen@gmail.com
@@ -26,7 +27,7 @@ feature that leads to it not being cross-platform
     * GitHub issues (more preferred)
 
 ## Essential tools:
-  * [GCC](https://gcc.gnu.org/) (or [Clang](https://clang.llvm.org/)): for compiling code
+  * [GCC](https://gcc.gnu.org/) ([Clang](https://clang.llvm.org/) or [Mircosoft C/C++ Compiler](https://aka.ms/vs/17/release/vs_BuildTools.exe)): for compiling code
   * [CMAKE](https://cmake.org/): For building the build files
   * [MAKE](https://en.wikipedia.org/wiki/Make_(software)) (or other build systems like [Ninja](https://ninja-build.org/)): for building the program
   * [GDB](https://www.sourceware.org/gdb/)(optional): For debugging code
