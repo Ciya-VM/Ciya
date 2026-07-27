@@ -16,21 +16,9 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdbool.h>
-#include "utils/repl.h"
-#include "utils/getline.h"
+#ifndef INCLUDE_UTILS_GETLINE_H
+#define INCLUDE_UTILS_GETLINE_H
 
-// See meaning on "utils/repl.h"
-void REPL() {
-  while (true) {
-    // An repl uses an "infinite" number of chars in input which means that NO LIMIT
-    // to achieve this, I'll make a custom version of getline().
-    char* input; // in here, we use a pointer to make it dynamically expandable
-    printf(">>> "); // print the starting thing
-    input = getLine();
-    printf("%s\n", input);
-    free(input); // make sure we free the pointer, we don't want any memory leaks
-  }
-}
+char* getLine();
+
+#endif
