@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/ryzon/Projects/Ciya/build",
+  "command": "/usr/lib64/ccache/cc  -I/home/ryzon/Projects/Ciyainclude  -o CMakeFiles/ciya.dir/src/main.c.o -c /home/ryzon/Projects/Ciya/src/main.c",
+  "file": "/home/ryzon/Projects/Ciya/src/main.c",
+  "output": "CMakeFiles/ciya.dir/src/main.c.o"
+},
+{
+  "directory": "/home/ryzon/Projects/Ciya/build",
+  "command": "/usr/lib64/ccache/cc  -I/home/ryzon/Projects/Ciyainclude  -o CMakeFiles/ciya.dir/src/utils/repl.c.o -c /home/ryzon/Projects/Ciya/src/utils/repl.c",
+  "file": "/home/ryzon/Projects/Ciya/src/utils/repl.c",
+  "output": "CMakeFiles/ciya.dir/src/utils/repl.c.o"
+}
+]

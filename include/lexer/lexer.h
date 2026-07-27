@@ -16,16 +16,12 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
+#ifndef INCLUDE_LEXER_LEXER_H
+#define INCLUDE_LEXER_LEXER_H
 
-#include <stdio.h> //For printf()
-#include "utils/repl.h"
+// This will hold the lexer's important values that need to be passed around
+typedef struct Lexer {
 
-int main(int argc, char* argv[]) {
-  if (argc > 1) {
-    printf("File reading is not supported yet.\n");
-    return argc;
-  }
+} Lexer;
 
-  REPL();
-  return 0;
-}
+#endif
