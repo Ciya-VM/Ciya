@@ -16,18 +16,10 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
-#include <stdlib.h>
-#include <stdio.h> //For printf()
-#include "misc/return_vals.h"
-#include "utils/repl.h"
+#ifndef INCLUDE_MISC_RETURN_VALUES_H
+#define INCLUDE_MISC_RETURN_VALUES_H
 
-// since you have custom return values then I'm making them
-int main(int argc, char* argv[]) {
-  if (argc > 1) {
-    printf("File reading is not supported yet.\n");
-    return IO_ERROR;
-  }
+#define RUN_COMPILE_ERROR 2
+#define IO_ERROR 3
 
-  REPL();
-  return EXIT_SUCCESS;
-}
+#endif
