@@ -17,8 +17,8 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 // This header will hold the token types enumeration
-#ifndef INCLUDE_TOKEN_TYPE_H
-#define INCLUDE_TOKEN_TYPE_H
+#ifndef INCLUDE_LEXER_TOKEN_TYPE_H
+#define INCLUDE_LEXER_TOKEN_TYPE_H
 
 typedef enum TokenType {
   // What token types do you want?

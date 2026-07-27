@@ -18,8 +18,8 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
 */
 
 // Header guards
-#ifndef INCLUDE_TOKEN_H
-#define INCLUDE_TOKEN_H
+#ifndef INCLUDE_LEXER_TOKEN_H
+#define INCLUDE_LEXER_TOKEN_H
 #include "tokentype.h"
 
 // this looks enough
