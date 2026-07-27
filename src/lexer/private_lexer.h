@@ -16,18 +16,11 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
-#ifndef INCLUDE_LEXER_LEXER_H
-#define INCLUDE_LEXER_LEXER_H
-#include "token.h"
+#ifndef SRC_LEXER_PRIVATE_LEXER_H
+#define SRC_LEXER_PRIVATE_LEXER_H
+#include "lexer/lexer.h"
 
-// This will hold the lexer's important values that need to be passed around
-typedef struct Lexer {
-  char* start; // this will hold the starting string address of the current token
-  char* current; // traces the current character to the end
-  // Token currentToken;
-} Lexer;
+// We put private and non-global lexer functions and objects here
+char peekToken(Lexer* lexer);
 
-// scanToken scans 1 token only, it groups a chunk of characters into easy spotting labeled structures
-Token scanToken(Lexer* lexer); // it passes the lexer struct around to keep the same values
-Lexer initLexer(char* src);
 #endif

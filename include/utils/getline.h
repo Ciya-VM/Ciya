@@ -19,6 +19,7 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
 #ifndef INCLUDE_UTILS_GETLINE_H
 #define INCLUDE_UTILS_GETLINE_H
 
-char* getLine();
+// This function inputs "infinite" from the input buffer
+char* getLine(); // It returns an allocated string
 
 #endif
