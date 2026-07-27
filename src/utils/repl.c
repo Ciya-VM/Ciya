@@ -16,6 +16,14 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
+#include <stdio.h>
+#include <stdbool.h>
 #include "utils/repl.h"
 
-
+// See meaning on "utils/repl.h"
+void REPL() {
+  while (true) {
+    printf(">> ");
+    // It's your job now, input and print.
+  }
+}
