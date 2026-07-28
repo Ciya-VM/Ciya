@@ -5,7 +5,7 @@ Welcome, dear reader!
 Now, we're trying to make a new project called `Ciya`.
 
 **Ciya** is a new programming language designed for speed.
-The name **Ciya** came from the word `Siya` which means he/she in filipino/tagalog, 
+The name **Ciya** came from the word `Siya`, which means he/she in filipino/tagalog language, 
 We want `Ciya` to be a bigger leap than its successor, `CRy-VM`.
 We expect that it is mostly written in the
 [C Programming Language](https://en.wikipedia.org/wiki/C_(programming_language)).
