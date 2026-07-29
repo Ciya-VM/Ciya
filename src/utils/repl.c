@@ -34,7 +34,7 @@ void REPL() {
         input = NULL;
         exit(0);
     }
-    else if (strcmp(input, "link\n") == 0){
+    else if (strcmp(input, "linktocode\n") == 0){
         printf("https://github.com/johnryzon123/Ciya.git");
     }
     else{
