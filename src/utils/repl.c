@@ -27,7 +27,7 @@ void REPL() {
   while (1) {
     // An repl uses an "infinite" number of chars in input which means that NO LIMIT 
     // to achieve this, I'll make a custom version of getline(). 
-    char* input = getline(); // in here, we use a pointer to make it dynamically expandable
+    char* input = getLine(); // in here, we use a pointer to make it dynamically expandable
     printf(">>> "); // print the starting thing
     if (strcmp(input, "exit\n") == 0){
         free(input);
