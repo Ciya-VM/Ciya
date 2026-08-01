@@ -48,24 +48,20 @@ void REPL() {
     // An repl uses an "infinite" number of chars in input which means that NO LIMIT 
     // to achieve this, I'll make a custom version of getline(). 
     printf(">>> "); // print the starting thing
-    input = getLine();
-    Lexer lexer = { // This line until
-      .start = input, // ...
-      .current = input // ...
-    }; // here will be replaced by a function.
-    Token temp = scanToken(&lexer);
-    debugToken(&temp); // No support on multiple tokens for now
     char* input = getLine(); // in here, we use a pointer to make it dynamically expandable
-    if (strcmp(input, "exit\n") == 0){
+    if (strcmp(input, "exit") == 0){
+        printf("Exiting...\n");
         free(input);
-        input = NULL;
-        exit(0);
-    }
-    else if (strcmp(input, "linktocode\n") == 0){
-        printf("https://github.com/johnryzon123/Ciya.git");
-    }
-    else{
-        printf("%s\n", input);
+        return;
+    } else if (strcmp(input, "linktocode") == 0){
+        printf("https://github.com/johnryzon123/Ciya.git\n");
+    } else{
+      Lexer lexer = { // This line until
+        .start = input, // ...
+        .current = input // ...
+      }; // here will be replaced by a function.
+      Token temp = scanToken(&lexer);
+      debugToken(&temp); // No support on multiple tokens for now
     }
     free(input); // make sure we free the pointer, we don't want any memory leaks
     input = NULL;
