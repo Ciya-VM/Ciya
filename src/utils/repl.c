@@ -19,8 +19,27 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include "lexer/lexer.h"
+#include "lexer/token.h"
 #include "utils/repl.h"
 #include "utils/getline.h"
+
+static void debugToken(Token* token) {
+  printf("==== Token ====\n");
+  printf("Type: %d\n", token->type); // Note: This will print 9 for everything except for +.
+  printf("Lexeme: %.*s\n\n", token->length, token->start);
+}
+
+static void debugTokens(Token** tokens) {
+  while ((*tokens)->type != TOKEN_EOF) {
+    debugToken(*tokens);
+  }
+  debugToken(*tokens);
+}
+
+static void run(Token** tokens) {
+  debugTokens(tokens);
+}
 
 // See meaning on "utils/repl.h"
 void REPL() {
@@ -30,7 +49,12 @@ void REPL() {
     char* input; // in here, we use a pointer to make it dynamically expandable
     printf(">>> "); // print the starting thing
     input = getLine();
-    printf("%s\n", input);
+    Lexer lexer = { // This line until
+      .start = input, // ...
+      .current = input // ...
+    }; // here will be replaced by a function.
+    Token temp = scanToken(&lexer);
+    debugToken(&temp); // No support on multiple tokens for now
     free(input); // make sure we free the pointer, we don't want any memory leaks
   }
 }

@@ -18,9 +18,13 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
 */
 #ifndef SRC_LEXER_PRIVATE_LEXER_H
 #define SRC_LEXER_PRIVATE_LEXER_H
+#include "lexer/token.h"
 #include "lexer/lexer.h"
 
 // We put private and non-global lexer functions and objects here
-char peekToken(Lexer* lexer);
+char peekChar(Lexer* lexer); // This function returns the current character
+char moveChar(Lexer* lexer); // Moves to the next character
 
+// Sets up the token for use in the parser
+Token setupToken(Lexer* lexer, TokenType type);
 #endif
