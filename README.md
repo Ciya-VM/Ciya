@@ -30,7 +30,7 @@ feature that leads to it not being cross-platform
   * [GCC](https://gcc.gnu.org/) ([Clang](https://clang.llvm.org/) or [Mircosoft C/C++ Compiler](https://aka.ms/vs/17/release/vs_BuildTools.exe)): for compiling code
   * [CMAKE](https://cmake.org/): For building the build files
   * [MAKE](https://en.wikipedia.org/wiki/Make_(software)) (or other build systems like [Ninja](https://ninja-build.org/)): for building the program
-  * [GDB](https://www.sourceware.org/gdb/)(optional): For debugging code
+  * [GDB](https://www.sourceware.org/gdb/)(optional): For debugging code, or you can use the debugger in some IDE's
   * [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)(for windows, optional)
 
 ## Why we made the project:
