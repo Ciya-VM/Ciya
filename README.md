@@ -1,4 +1,4 @@
-# **Welcome to Ciya!**
+# **Welcome to Ciya! (parser stage)**
 
 Welcome, dear reader!
 
