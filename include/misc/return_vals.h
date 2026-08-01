@@ -21,5 +21,5 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
 
 #define RUN_COMPILE_ERROR 2
 #define IO_ERROR 3
-
+#define EXIT_SUCCESS 0
 #endif

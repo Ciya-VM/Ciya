@@ -18,9 +18,13 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
 */
 #include <stdlib.h>
 #include <stdio.h>
+<<<<<<< HEAD
 #include <stdbool.h>
 #include "lexer/lexer.h"
 #include "lexer/token.h"
+=======
+#include <string.h>
+>>>>>>> 0137c96126f9d8d1f62c50006a762b6fb71660bf
 #include "utils/repl.h"
 #include "utils/getline.h"
 
@@ -43,11 +47,11 @@ static void run(Token** tokens) {
 
 // See meaning on "utils/repl.h"
 void REPL() {
-  while (true) {
-    // An repl uses an "infinite" number of chars in input which means that NO LIMIT
-    // to achieve this, I'll make a custom version of getline().
-    char* input; // in here, we use a pointer to make it dynamically expandable
+  while (1) {
+    // An repl uses an "infinite" number of chars in input which means that NO LIMIT 
+    // to achieve this, I'll make a custom version of getline(). 
     printf(">>> "); // print the starting thing
+<<<<<<< HEAD
     input = getLine();
     Lexer lexer = { // This line until
       .start = input, // ...
@@ -55,6 +59,21 @@ void REPL() {
     }; // here will be replaced by a function.
     Token temp = scanToken(&lexer);
     debugToken(&temp); // No support on multiple tokens for now
+=======
+    char* input = getLine(); // in here, we use a pointer to make it dynamically expandable
+    if (strcmp(input, "exit\n") == 0){
+        free(input);
+        input = NULL;
+        exit(0);
+    }
+    else if (strcmp(input, "linktocode\n") == 0){
+        printf("https://github.com/johnryzon123/Ciya.git");
+    }
+    else{
+        printf("%s\n", input);
+    }
+>>>>>>> 0137c96126f9d8d1f62c50006a762b6fb71660bf
     free(input); // make sure we free the pointer, we don't want any memory leaks
+    input = NULL;
   }
 }

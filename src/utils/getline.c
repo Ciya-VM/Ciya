@@ -62,4 +62,5 @@ char* getLine() {
   }
   input[count] = '\0'; // we must always put a null terminator at the end of each string
   return input; // return it
+  
 }
