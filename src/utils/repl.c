@@ -44,17 +44,24 @@ static void run(Token** tokens) {
 
 // See meaning on "utils/repl.h"
 void REPL() {
+  printf("Ciya v0.0 interactive REPL\n");
+  // Following GNU rights
+  printf("Copyright (C) 2026  Johnryzon Z. Abejero, Nguyễn Phước Thành Lâm\n");
+  printf("License GPLv2: GNU GPL version 2 <http://gnu.org/licenses/gpl.htmp>\n");
+  printf("This is entirely free software: you are free to modify and redistribute it.\n");
+  printf("There is NO WARRANTY, by the law of the GPL\n");
+
   while (1) {
     // An repl uses an "infinite" number of chars in input which means that NO LIMIT 
     // to achieve this, I'll make a custom version of getline(). 
     printf(">>> "); // print the starting thing
     char* input = getLine(); // in here, we use a pointer to make it dynamically expandable
     if (strcmp(input, "exit") == 0){
-        printf("Exiting...\n");
-        free(input);
-        return;
+      printf("Exiting...\n");
+      free(input);
+      return;
     } else if (strcmp(input, "linktocode") == 0){
-        printf("https://github.com/johnryzon123/Ciya.git\n");
+      printf("https://github.com/johnryzon123/Ciya.git\n");
     } else{
       Lexer lexer = { // This line until
         .start = input, // ...
