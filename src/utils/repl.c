@@ -50,7 +50,7 @@ void REPL() {
   printf("License GPLv2: GNU GPL version 2 <http://gnu.org/licenses/gpl.htmp>\n");
   printf("This is entirely free software: you are free to modify and redistribute it.\n");
   printf("There is NO WARRANTY, by the law of the GPL\n");
-  printf("Current commands: exit, linktosource, and freemem\n");
+  printf("Current commands: exit, linktosource, linktosource-html, and freemem\n");
 
   while (1) {
     // An repl uses an "infinite" number of chars in input which means that NO LIMIT 
@@ -63,11 +63,34 @@ void REPL() {
       input = NULL; //Don't forget the dangling pointers =)
       return;
     } else if (strcmp(input, "linktosource") == 0){ //I change link to source because the word code is broad, but source mean in where is it from 
-      printf("https://github.com/johnryzon123/Ciya.git\n");
+      printf("link: https://github.com/johnryzon123/Ciya.git\n");
+
+      #if defined(__linux__)
+      system("xdg-open https://github.com/johnryzon123/Ciya.git"); 
+      #elif defined(__APPLE__)
+      system("open https://github.com/johnryzon123/Ciya.git");
+      #elif defined(_WIN32) || defined(WIN64_)
+      system("start https://github.com/johnryzon123/Ciya.git");
+      #endif
+      free(input);
+      input = NULL;
     } else if (strcmp(input, "freemem") == 0){ //Add it to free memory (idk why)
       free(input);
       input = NULL;
       printf("Memory free!\n");
+    }
+    else if (strcmp(input, "linktosource-html") == 0){
+      printf("link: https://github.com/Ciya-VM/Ciya-VM.github.io.git\n");
+
+      #if defined(__linux__)
+      system("xdg-open https://github.com/Ciya-VM/Ciya-VM.github.io.git");
+      #elif defined(__APPLE__)
+      system("open https://github.com/Ciya-VM/Ciya-VM.github.io.git");
+      #elif defined(_WIN32) || defined(WIN64_)
+      system("start https://github.com/Ciya-VM/Ciya-VM.github.io.git");
+      #endif
+      free(input);
+      input = NULL;
     }
     else{
       Lexer lexer = { // This line until

@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/ciya.dir/src/lexer/lexer.c.o CMakeFiles/ciya.dir/src/lexer/utils.c.o CMakeFiles/ciya.dir/src/main.c.o CMakeFiles/ciya.dir/src/utils/getline.c.o CMakeFiles/ciya.dir/src/utils/repl.c.o -o ciya 

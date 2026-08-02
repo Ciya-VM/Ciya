@@ -1,3 +1,0 @@
-/mnt/c/Users/Admin/Documents/GitHub/Ciya-collabing/Ciya/linux-build/CMakeFiles/ciya.dir
-/mnt/c/Users/Admin/Documents/GitHub/Ciya-collabing/Ciya/linux-build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/Admin/Documents/GitHub/Ciya-collabing/Ciya/linux-build/CMakeFiles/rebuild_cache.dir
