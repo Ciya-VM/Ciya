@@ -50,7 +50,7 @@ void REPL() {
   printf("License GPLv2: GNU GPL version 2 <http://gnu.org/licenses/gpl.htmp>\n");
   printf("This is entirely free software: you are free to modify and redistribute it.\n");
   printf("There is NO WARRANTY, by the law of the GPL\n");
-  printf("Current commands: exit, linktosource, linktosource-html, and freemem\n");
+  printf("Current commands: exit, linktosource, linktosource-html, freemem and ca\n");
 
   while (1) {
     // An repl uses an "infinite" number of chars in input which means that NO LIMIT 
@@ -91,6 +91,11 @@ void REPL() {
       #endif
       free(input);
       input = NULL;
+    }
+    else if (strcmp(input, "ca") == 0){
+        printf("Commands: ca, linktosource, linktosource-html, freemem\n");
+        free(input);
+        input = NULL;
     }
     else{
       Lexer lexer = { // This line until
