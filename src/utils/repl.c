@@ -44,12 +44,13 @@ static void run(Token** tokens) {
 
 // See meaning on "utils/repl.h"
 void REPL() {
-  printf("Ciya v0.0 interactive REPL\n");
+  printf("Ciya v0.0.1 interactive REPL\n");
   // Following GNU rights
   printf("Copyright (C) 2026  Johnryzon Z. Abejero, Nguyễn Phước Thành Lâm\n");
   printf("License GPLv2: GNU GPL version 2 <http://gnu.org/licenses/gpl.htmp>\n");
   printf("This is entirely free software: you are free to modify and redistribute it.\n");
   printf("There is NO WARRANTY, by the law of the GPL\n");
+  printf("Current commands: exit, linktosource, and freemem\n");
 
   while (1) {
     // An repl uses an "infinite" number of chars in input which means that NO LIMIT 
@@ -59,10 +60,16 @@ void REPL() {
     if (strcmp(input, "exit") == 0){
       printf("Exiting...\n");
       free(input);
+      input = NULL; //Don't forget the dangling pointers =)
       return;
-    } else if (strcmp(input, "linktocode") == 0){
+    } else if (strcmp(input, "linktosource") == 0){ //I change link to source because the word code is broad, but source mean in where is it from 
       printf("https://github.com/johnryzon123/Ciya.git\n");
-    } else{
+    } else if (strcmp(input, "freemem") == 0){ //Add it to free memory (idk why)
+      free(input);
+      input = NULL;
+      printf("Memory free!\n");
+    }
+    else{
       Lexer lexer = { // This line until
         .start = input, // ...
         .current = input // ...
