@@ -37,9 +37,9 @@ feature that leads to it not being cross-platform
 
 ## Why we made the project:
 We first made the project on July 22nd(`22/07/26`, 21st century; 21st century means >2001 and not >2100 as most people think), which is very *early*, after the creator and owner of
-**CRy-VM** suggested a new language. So, we started this repo to be *faster and a bigger* leap than its successor, CRy-VM. Also, don't dare to 
-commit to the other ones like CRy-VM, Ry2, or Ry1, because they got abandoned long ago.
-
+**CRy-VM** suggested a new language. So, we started this repo to be *faster and a bigger* leap than its successor, CRy-VM. As long ago, in **2024-2025** The creator that making Ry1, which 
+he found out he's using too much AI, and heavy tools, heavy classes, etc... which made it unoptimized. So, we made Ciya! But really don't fork the older ones as it's abondard and no longer have
+support.
 
 Repo made by `Johnryzon Z. Abejero`,
 
