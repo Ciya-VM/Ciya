@@ -44,7 +44,7 @@ static void run(Token** tokens) {
 
 // See meaning on "utils/repl.h"
 void REPL(char* argv[]) {
-  printf("Ciya v0.0.1 interactive REPL\n");
+  printf("Ciya v0.0.2 interactive REPL\n");
   // Following GNU rights
   printf("Copyright (C) 2026  Johnryzon Z. Abejero, Nguyễn Phước Thành Lâm\n");
   printf("License GPLv2: GNU GPL version 2 <http://gnu.org/licenses/gpl.html>\n");
