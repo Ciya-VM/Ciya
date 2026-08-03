@@ -40,7 +40,7 @@ We first made the project on July 22nd(`22/07/26`, 21st century; 21st century me
 **CRy-VM** suggested a new language. So, we started this repo to be *faster and a bigger* leap than its successor, CRy-VM. As long ago, in **2024-2025**, the creator who made Ry1 found out he was using too much AI and heavy tools, heavy classes, etc., which made it unoptimized. So, we made Ciya! But really don't fork the older ones, as it's abandoned and no longer has
 support.
 
-## How to install the packages?:
+## How to install the packages:
 <img width="480" height="360" alt="image" src="https://github.com/user-attachments/assets/b6a2cff3-7c81-464c-9775-82c822137046" />
 
 To install the Linux or BSD packages, you need to first have `wget` for this, but if you don't have then here's a way to install it
