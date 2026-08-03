@@ -26,7 +26,8 @@ Token* scanTokens(Lexer* lexer) {
       return lexer->tokens.tokens;
 
     if (lexer->tokens.count >= lexer->tokens.capacity)
-      lexer->tokens.tokens = realloc(lexer->tokens.tokens, lexer->tokens.capacity *= 2);
+      lexer->tokens.capacity *= 2;
+      lexer->tokens.tokens = realloc(lexer->tokens.tokens, lexer->tokens.capacity * sizeof(Token));
 
     lexer->tokens.count++;
   }
@@ -34,12 +35,11 @@ Token* scanTokens(Lexer* lexer) {
 
 Token scanToken(Lexer* lexer) {
   char c = peekChar(lexer);
+
+  if (c == '\0') return setupToken(lexer, TOKEN_EOF);
   moveChar(lexer);
 
   switch (c) {
-  case '\0':
-    return setupToken(lexer, TOKEN_EOF);
-
   case '+':
     return setupToken(lexer, TOKEN_PLUS);
   case '-':
@@ -66,7 +66,7 @@ Token scanToken(Lexer* lexer) {
 Lexer initLexer(char* src) {
   Lexer lexer;
   lexer.tokens.capacity = 50;
-  lexer.tokens.tokens = malloc(lexer.tokens.capacity);
+  lexer.tokens.tokens = malloc(sizeof(Token) * lexer.tokens.capacity);
   lexer.current = src;
   lexer.start = src;
   return lexer;

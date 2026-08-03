@@ -58,6 +58,7 @@ void REPL(char* argv[]) {
     // to achieve this, I'll make a custom version of getline(). 
     printf(">>> "); // print the starting thing
     char* input = getLine(); // in here, we use a pointer to make it dynamically expandable
+    Lexer lexer;
     if (strcmp(input, ".exit") == 0){
       printf("Exiting...\n");
       free(input);
@@ -97,11 +98,12 @@ void REPL(char* argv[]) {
       free(input);
       input = NULL;
     } else{
-      Lexer lexer = initLexer(input);
+      lexer = initLexer(input);
       scanTokens(&lexer);
       run(&lexer.tokens.tokens);
     }
     free(input); // make sure we free the pointer, we don't want any memory leaks
+    free(lexer.tokens.tokens);
     input = NULL;
   }
 }
