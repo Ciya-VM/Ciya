@@ -28,6 +28,6 @@ int main(int argc, char* argv[]) {
     return IO_ERROR;
   }
 
-  REPL();
+  REPL(argv);
   return EXIT_SUCCESS;
 }

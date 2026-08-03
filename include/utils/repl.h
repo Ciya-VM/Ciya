@@ -21,7 +21,7 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
 // write definitions here
 
 // Main repl entry point
-void REPL/*Read Evaluate and Print Loop*/(/*Put future argument here, eg. Lexer* lexer*/);
+void REPL/*Read Evaluate and Print Loop*/(char* argv[]/*Put future argument here, eg. Lexer* lexer*/);
 // ^ The Repl inputs the users, runs them and prints the result
 
 #endif
