@@ -34,6 +34,7 @@ static void debugToken(Token* token) {
 static void debugTokens(Token** tokens) {
   while ((*tokens)->type != TOKEN_EOF) {
     debugToken(*tokens);
+    (*tokens)++;
   }
   debugToken(*tokens);
 }
@@ -97,8 +98,8 @@ void REPL(char* argv[]) {
       input = NULL;
     } else{
       Lexer lexer = initLexer(input);
-      Token temp = scanToken(&lexer);
-      debugToken(&temp); // No support on multiple tokens for now
+      scanTokens(&lexer);
+      run(&lexer.tokens.tokens);
     }
     free(input); // make sure we free the pointer, we don't want any memory leaks
     input = NULL;

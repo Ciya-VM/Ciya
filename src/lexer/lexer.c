@@ -16,16 +16,30 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
+#include <stdlib.h>
 #include <ctype.h>
 #include "private_lexer.h"
+
+Token* scanTokens(Lexer* lexer) {
+  while (1) {
+    if ((lexer->tokens.tokens[lexer->tokens.count] = scanToken(lexer)).type == TOKEN_EOF)
+      return lexer->tokens.tokens;
+
+    if (lexer->tokens.count >= lexer->tokens.capacity)
+      lexer->tokens.tokens = realloc(lexer->tokens.tokens, lexer->tokens.capacity *= 2);
+
+    lexer->tokens.count++;
+  }
+}
 
 Token scanToken(Lexer* lexer) {
   char c = peekChar(lexer);
   moveChar(lexer);
 
   switch (c) {
-    // put cases in here ->
-    // 2 for now
+  case '\0':
+    return setupToken(lexer, TOKEN_EOF);
+
   case '+':
     return setupToken(lexer, TOKEN_PLUS);
   case '-':
@@ -51,6 +65,8 @@ Token scanToken(Lexer* lexer) {
 
 Lexer initLexer(char* src) {
   Lexer lexer;
+  lexer.tokens.capacity = 50;
+  lexer.tokens.tokens = malloc(lexer.tokens.capacity);
   lexer.current = src;
   lexer.start = src;
   return lexer;
