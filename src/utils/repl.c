@@ -96,10 +96,7 @@ void REPL(char* argv[]) {
       free(input);
       input = NULL;
     } else{
-      Lexer lexer = { // This line until
-        .start = input, // ...
-        .current = input // ...
-      }; // here will be replaced by a function.
+      Lexer lexer = initLexer(input);
       Token temp = scanToken(&lexer);
       debugToken(&temp); // No support on multiple tokens for now
     }

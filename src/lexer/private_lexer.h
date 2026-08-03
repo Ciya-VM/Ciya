@@ -27,4 +27,9 @@ char moveChar(Lexer* lexer); // Moves to the next character
 
 // Sets up the token for use in the parser
 Token setupToken(Lexer* lexer, TokenType type);
+
+// These functions will handle token making for literals like numbers
+Token handleNumber(Lexer* lexer);
+Token handleName(Lexer* lexer);
+
 #endif
