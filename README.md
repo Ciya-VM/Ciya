@@ -24,8 +24,7 @@ Feel free to collaborate on this project, but you MUST follow the license and po
  1 operating system
 feature that leads to it not being cross-platform
 + Please report to us when there's any problem:
-    * phuocthanhlamnguyen@gmail.com
-    * johnryzon2@gmail.com
+    No spambots must get through! No email is posted.
     * GitHub issues (more preferred)
 
 ## Essential tools:
