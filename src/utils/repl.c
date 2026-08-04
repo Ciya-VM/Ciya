@@ -31,15 +31,16 @@ static void debugToken(Token* token) {
   printf("Lexeme: %.*s\n\n", token->length, token->start);
 }
 
-static void debugTokens(Token** tokens) {
-  while ((*tokens)->type != TOKEN_EOF) {
-    debugToken(*tokens);
-    (*tokens)++;
+static void debugTokens(Token* tokens) {
+  Token* _tokens = tokens;
+  while (_tokens->type != TOKEN_EOF) {
+    debugToken(_tokens);
+    _tokens++;
   }
-  debugToken(*tokens);
+  debugToken(_tokens);
 }
 
-static void run(Token** tokens) {
+static void run(Token* tokens) {
   debugTokens(tokens);
 }
 
@@ -100,10 +101,10 @@ void REPL(char* argv[]) {
     } else{
       lexer = initLexer(input);
       scanTokens(&lexer);
-      run(&lexer.tokens.tokens);
+      run(lexer.tokens.tokens);
+      free(lexer.tokens.tokens);
     }
     free(input); // make sure we free the pointer, we don't want any memory leaks
-    free(lexer.tokens.tokens);
     input = NULL;
   }
 }
