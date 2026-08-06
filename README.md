@@ -1,8 +1,7 @@
 # **Welcome to Ciya! (parser stage)**
+<img width="500" height="500" alt="drawing" src="https://github.com/user-attachments/assets/622fb2f4-5ae8-481f-ab5f-76778e812c9a" />
 
-<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/96982b90-d497-4135-81c3-583b7a12bff8" />
-
-Welcome, dear reader!
+**Welcome, dear reader!**
 
 Now, we're trying to make a new project called `Ciya`.
 
