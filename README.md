@@ -35,7 +35,7 @@ feature that leads to it not being cross-platform
   * [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)(for windows, optional) for Linux testing binaries
 
 ## Why we made the project:
-We first made the project on July 22nd(`22/07/26`, 21st century; 21st century means >2001 and not >2100 as most people think), which is very *early*, after the creator and owner of
+We first made the project on July 22nd, 2026 which is very *early*, after the creator and owner of
 **CRy-VM** suggested a new language. So, we started this repo to be *faster and a bigger* leap than its successor, CRy-VM. As long ago, in **2024-2025**, the creator who made Ry1 found out he was using too much AI and heavy tools, heavy classes, etc., which made it unoptimized. So, we made Ciya! But really don't fork the older ones, as it's abandoned and no longer has
 support.
 
