@@ -16,18 +16,22 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
-#include <stdlib.h>
-#include <stdio.h> //For printf()
-#include "misc/return_vals.h"
-#include "utils/repl.h"
+#include <ctype.h>
+#include "private_lexer.h"
 
-// since you have custom return values then I'm making them
-int main(int argc, char* argv[]) {
-  if (argc > 1) {
-    printf("File reading is not supported yet.\n");
-    return IO_ERROR;
+Token handleNumber(Lexer* lexer) {
+  while (isdigit(peekChar(lexer))) {
+    moveChar(lexer);
   }
 
-  REPL(argv);
-  return EXIT_SUCCESS;
+  return setupToken(lexer, TOKEN_NUMBER);
+}
+
+Token handleName(Lexer* lexer) {
+  char c;
+  while (isalnum(c = peekChar(lexer)) || c == '_') {
+    moveChar(lexer);
+  }
+
+  return setupToken(lexer, TOKEN_NAME);
 }

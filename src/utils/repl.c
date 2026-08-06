@@ -31,38 +31,41 @@ static void debugToken(Token* token) {
   printf("Lexeme: %.*s\n\n", token->length, token->start);
 }
 
-static void debugTokens(Token** tokens) {
-  while ((*tokens)->type != TOKEN_EOF) {
-    debugToken(*tokens);
+static void debugTokens(Token* tokens) {
+  Token* _tokens = tokens;
+  while (_tokens->type != TOKEN_EOF) {
+    debugToken(_tokens);
+    _tokens++;
   }
-  debugToken(*tokens);
+  debugToken(_tokens);
 }
 
-static void run(Token** tokens) {
+static void run(Token* tokens) {
   debugTokens(tokens);
 }
 
 // See meaning on "utils/repl.h"
-void REPL() {
-  printf("Ciya v0.0.1 interactive REPL\n");
+void REPL(char* argv[]) {
+  printf("Ciya v0.0.2 interactive REPL\n");
   // Following GNU rights
   printf("Copyright (C) 2026  Johnryzon Z. Abejero, Nguyễn Phước Thành Lâm\n");
-  printf("License GPLv2: GNU GPL version 2 <http://gnu.org/licenses/gpl.htmp>\n");
+  printf("License GPLv2: GNU GPL version 2 <http://gnu.org/licenses/gpl.html>\n");
   printf("This is entirely free software: you are free to modify and redistribute it.\n");
-  printf("There is NO WARRANTY, by the law of the GPL\n");
-  printf("Current commands: exit, linktosource, linktosource-html, freemem and ca\n");
+  printf("There is NO WARRANTY, by the law of the GPL.\n\n");
 
+  printf("Note: Type '.help' to view the current commands\n");
   while (1) {
     // An repl uses an "infinite" number of chars in input which means that NO LIMIT 
     // to achieve this, I'll make a custom version of getline(). 
     printf(">>> "); // print the starting thing
     char* input = getLine(); // in here, we use a pointer to make it dynamically expandable
-    if (strcmp(input, "exit") == 0){
+    Lexer lexer;
+    if (strcmp(input, ".exit") == 0){
       printf("Exiting...\n");
       free(input);
       input = NULL; //Don't forget the dangling pointers =)
       return;
-    } else if (strcmp(input, "linktosource") == 0){ //I change link to source because the word code is broad, but source mean in where is it from 
+    } else if (strcmp(input, ".linktosource") == 0){ //I change link to source because the word code is broad, but source mean in where is it from
       printf("link: https://github.com/johnryzon123/Ciya.git\n");
 
       #if defined(__linux__)
@@ -74,12 +77,11 @@ void REPL() {
       #endif
       free(input);
       input = NULL;
-    } else if (strcmp(input, "freemem") == 0){ //Add it to free memory (idk why)
+    } else if (strcmp(input, ".freemem") == 0){ //Add it to free memory (idk why)
       free(input);
       input = NULL;
       printf("Memory free!\n");
-    }
-    else if (strcmp(input, "linktosource-html") == 0){
+    } else if (strcmp(input, ".websource") == 0){
       printf("link: https://github.com/Ciya-VM/Ciya-VM.github.io.git\n");
 
       #if defined(__linux__)
@@ -91,19 +93,16 @@ void REPL() {
       #endif
       free(input);
       input = NULL;
-    }
-    else if (strcmp(input, "ca") == 0){
-        printf("Commands: ca, linktosource, linktosource-html, freemem\n");
-        free(input);
-        input = NULL;
-    }
-    else{
-      Lexer lexer = { // This line until
-        .start = input, // ...
-        .current = input // ...
-      }; // here will be replaced by a function.
-      Token temp = scanToken(&lexer);
-      debugToken(&temp); // No support on multiple tokens for now
+    } else if (strcmp(input, ".help") == 0){
+      printf("USAGE: %s <args (developing; not supported)>\n", argv[0]);
+      printf("Commands: .help, .linktosource, .websource, .freemem, .exit\n");
+      free(input);
+      input = NULL;
+    } else{
+      lexer = initLexer(input);
+      scanTokens(&lexer);
+      run(lexer.tokens.tokens);
+      free(lexer.tokens.tokens);
     }
     free(input); // make sure we free the pointer, we don't want any memory leaks
     input = NULL;

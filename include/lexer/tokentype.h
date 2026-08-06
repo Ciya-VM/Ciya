@@ -34,7 +34,7 @@ typedef enum TokenType {
 
   // Literals
   TOKEN_NUMBER, // like 123
-  TOKEN_NAMES/*or identifiers*/,
+  TOKEN_NAME/*or identifier*/,
 
   // keywords
   TOKEN_SAY,

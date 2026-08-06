@@ -16,18 +16,59 @@ Ciya: a future programming language VM that is hoped to be a bigger leap than th
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
+#include <stdlib.h>
+#include <ctype.h>
 #include "private_lexer.h"
+
+Token* scanTokens(Lexer* lexer) {
+  while (1) {
+    if (lexer->tokens.count >= lexer->tokens.capacity)
+      lexer->tokens.capacity *= 2;
+      lexer->tokens.tokens = realloc(lexer->tokens.tokens, lexer->tokens.capacity * sizeof(Token));
+
+    if ((lexer->tokens.tokens[lexer->tokens.count] = scanToken(lexer)).type == TOKEN_EOF)
+      return lexer->tokens.tokens;
+
+    lexer->tokens.count++;
+  }
+}
 
 Token scanToken(Lexer* lexer) {
   char c = peekChar(lexer);
+
+  if (c == '\0') return setupToken(lexer, TOKEN_EOF);
   moveChar(lexer);
 
   switch (c) {
-    // put cases in here ->
-    // 2 for now
   case '+':
     return setupToken(lexer, TOKEN_PLUS);
+  case '-':
+    return setupToken(lexer, TOKEN_MINUS);
+  case '*':
+    return setupToken(lexer, TOKEN_STAR);
+  case '/':
+    return setupToken(lexer, TOKEN_DIVIDE);
+  case '=':
+    return setupToken(lexer, TOKEN_EQUALS);
+  case ':':
+    return setupToken(lexer, TOKEN_EQUALS);
   default:
+    if (isdigit(peekChar(lexer))) {
+      return handleNumber(lexer);
+    } else if (isalpha(peekChar(lexer))) {
+      return handleName(lexer);
+    }
+
     return setupToken(lexer, TOKEN_EOF/*replaced by TOKEN_ERROR later on*/);
   }
+}
+
+Lexer initLexer(char* src) {
+  Lexer lexer;
+  lexer.tokens.capacity = 50;
+  lexer.tokens.count = 0;
+  lexer.tokens.tokens = malloc(sizeof(Token) * lexer.tokens.capacity);
+  lexer.current = src;
+  lexer.start = src;
+  return lexer;
 }
