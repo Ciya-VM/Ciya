@@ -23,7 +23,7 @@ Feel free to collaborate on this project, but you MUST follow the license and po
  1 operating system
 feature that leads to it not being cross-platform
 + Please report to us when there's any problem:
-    No spambots must get through! No email is posted.
+    No spambots must get through! No email is posted. Contributer note: I risked it, here's my email: phuocthanhlamnguyen@gmail.com
     * GitHub issues (more preferred)
 
 ## Essential tools:
@@ -83,6 +83,12 @@ tar -xzvf ciya-linux.tar.gz # Second, extract the file
 chrom +x <binary file> # To handle the premission
 ./<binary file> # run it!
 ```
+
+## More details in:
+
+[Official Wiki](https://github.com/Ciya-VM/Ciya/wiki/Introduction)
+
+[Our website](https://ciya-vm.github.io/)
 
 Repo made by `Johnryzon Z. Abejero`
 
