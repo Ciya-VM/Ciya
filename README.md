@@ -76,7 +76,7 @@ After you have wget, you can now get the package you need by typing the command:
 wget -O <binary name> <binary link>
 ```
 
-After that, you can install in different ways, but generally, you'll get the .tar.gz or the package, but I recommend the tar.gz one, like this:
+After that, you can install in different ways, but generally, you'll get the .tar.gz or the package; I recommend the tar.gz one, like this:
 
 ```bash
 wget -O ciya-linux.tar.gz https://github.com/Ciya-VM/Ciya/raw/main/package/Linux/ciya-linux.tar.gz # First, get the file
@@ -85,9 +85,11 @@ chrom +x <binary file> # To handle the premission
 ./<binary file> # run it!
 ```
 
+But there are *different ways* to install the packages, and it depends on what fits you!
+
 ## More details in:
 
-[Official Wiki](https://github.com/Ciya-VM/Ciya/wiki/Introduction)
+[The Official Wiki](https://github.com/Ciya-VM/Ciya/wiki/Introduction)
 
 [Our website](https://ciya-vm.github.io/)
 
