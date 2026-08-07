@@ -79,7 +79,7 @@ wget -O <binary name> <binary link>
 After that, you can install in different ways, but generally, you'll get the .tar.gz or the package; I recommend the tar.gz one, like this:
 
 ```bash
-wget -O ciya-linux.tar.gz https://github.com/Ciya-VM/Ciya/raw/main/package/Linux/ciya-linux.tar.gz # First, get the file
+wget -O ciya-linux.tar.gz https://github.com/Ciya-VM/Ciya/raw/main/package/tarball/ciya-linux.tar.gz # First, get the file
 tar -xzvf ciya-linux.tar.gz # Second, extract the file
 chrom +x <binary file> # To handle the premission
 ./<binary file> # run it!
