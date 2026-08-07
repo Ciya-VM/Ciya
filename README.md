@@ -23,7 +23,8 @@ Feel free to collaborate on this project, but you MUST follow the license and po
  1 operating system
 feature that leads to it not being cross-platform
 + Please report to us when there's any problem:
-    No spambots must get through! No email is posted. Contributer note: I risked it, here's my email: phuocthanhlamnguyen@gmail.com
+    No spambots must get through! No email is posted. 
+    * Contributor note: I risked it; here's my email: phuocthanhlamnguyen@gmail.com
     * GitHub issues (more preferred)
 
 ## Essential tools:
@@ -34,8 +35,8 @@ feature that leads to it not being cross-platform
   * [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)(for windows, optional) for Linux testing binaries
 
 ## Why we made the project:
-We first made the project on July 22nd, 2026 which is very *early*, after the creator and owner of
-**CRy-VM** suggested a new language. So, we started this repo to be *faster and a bigger* leap than its successor, CRy-VM. As long ago, in **2024-2025**, the creator who made Ry1 found out he was using too much AI and heavy tools, heavy classes, etc., which made it unoptimized. So, we made Ciya! But really don't fork the older ones, as it's abandoned and no longer has
+We first made the project on July 22nd, 2026, which is very *early*, after the creator and owner of
+**CRy-VM** suggested a new language. So, we started this repo to be a *faster and bigger* leap than its successor, CRy-VM. As long ago, in **2024-2025**, the creator who made Ry1 found out he was using too much AI and heavy tools, heavy classes, etc., which made it unoptimized. So, we made Ciya! But really don't fork the older ones, as it's abandoned and no longer has
 support.
 
 ## How to install the packages:
