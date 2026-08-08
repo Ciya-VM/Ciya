@@ -2,7 +2,7 @@
 
 echo "This script may only work on linux"
 echo "Merging to main...."
-git switch main
+git switch development
 
 for file in $(git ls-tree -r minimalist --name-only | grep -E '\.(c|h)$'); do
     base_name=$(basename "$file")
