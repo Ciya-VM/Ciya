@@ -8,7 +8,7 @@ for file in $(git ls-tree -r minimalist --name-only | grep -E '\.(c|h)$'); do
     base_name=$(basename "$file")
     target_path=$(find src include -name "$base_name" 2>/dev/null)
     if [ ! -z "$target_path" ]; then
-        git show "minimalist:$file" > "$target_path"
+        git merge-file "$target_path" <(git show HEAD:"$file") <(git show minimalist:"$file")
     fi
 done
 
