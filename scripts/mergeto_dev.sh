@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "This script may only work on linux"
-echo "Merging to main...."
+echo "Merging to development...."
 git switch development
 
 for file in $(git ls-tree -r minimalist --name-only | grep -E '\.(c|h)$'); do
