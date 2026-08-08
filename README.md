@@ -96,7 +96,11 @@ But there are *different ways* to install the packages, and it depends on what f
 
 ## More details in:
 
-[Our official Wiki](https://github.com/Ciya-VM/Ciya/wiki/Introduction), [Our website](https://ciya-vm.github.io/), [Development code](https://github.com/Ciya-VM/Ciya/tree/development)
+[Our official Wiki](https://github.com/Ciya-VM/Ciya/wiki/Introduction),
+[Our website](https://ciya-vm.github.io/),
+[Development code](https://github.com/Ciya-VM/Ciya/tree/development),
+[Minimal code](https://github.com/Ciya-VM/Ciya/tree/minimalist)
+
 
 Repo made by `Johnryzon Z. Abejero`
 
