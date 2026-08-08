@@ -42,7 +42,14 @@ support.
 ## How to install the packages:
 <img width="480" height="360" alt="image" src="https://github.com/user-attachments/assets/b6a2cff3-7c81-464c-9775-82c822137046" />
 
-To install the Linux or BSD packages, you need to first have `wget` for this, but if you don't have then here's a way to install it
+To install the Linux or BSD packages, you need to first have `wget` for this; most mainstream Linux distros come with it
+But to check, here's the command
+
+```bash
+wget --version
+```
+
+If it says a version like `1.21.4`, then great! Else, here's the command to install it:
 
 On Debian:
 ```bash
