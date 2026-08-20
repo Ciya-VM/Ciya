@@ -1,0 +1,3 @@
+[submodule "Ciya-full"]
+	path = Ciya-full
+	url = https://github.com/Ciya-VM/Ciya-full.git
