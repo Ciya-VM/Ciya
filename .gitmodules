@@ -1,3 +1,6 @@
 [submodule "Ciyac"]
 	path = Ciyac
 	url = https://github.com/Iya-lang/Ciyac.git
+[submodule "iya-lang.github.io"]
+	path = iya-lang.github.io
+	url = https://github.com/Iya-lang/iya-lang.github.io.git
