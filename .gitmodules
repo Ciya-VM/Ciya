@@ -7,3 +7,6 @@
 [submodule "download-site"]
 	path = download-site
 	url = https://github.com/Iya-lang/download-link
+[submodule "special.dir"]
+	path = special.dir
+	url = https://github.com/Iya-lang/.github.git
