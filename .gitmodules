@@ -4,3 +4,6 @@
 [submodule "iya-lang.github.io"]
 	path = iya-lang.github.io
 	url = https://github.com/Iya-lang/iya-lang.github.io.git
+[submodule "download-site"]
+	path = download-site
+	url = https://github.com/Iya-lang/download-link
